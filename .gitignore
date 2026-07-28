@@ -1,0 +1,21 @@
+# Environment Variables
+.env
+client/.env
+server/.env
+
+# Node Modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build
+dist/
+client/dist/
+server/dist/
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/

@@ -58,28 +58,140 @@ bash
 node -v
 npm -v
 
-How to access it
-BACKEND
--> First clone this repository 'git clone https://github.com/username/car-rental.git' 
--> Go to Inside Project : cd car-rental
--> Go to backend folder: cd server
--> create: server/.env => copy from .env.example
--> Run backend: npm run server
--> if successfull you will see : Database connected
-                                Server running on port 3000 
--> backend will run: http://localhost:3000
+# 5. Installation & Running Locally
+Step 1 - Clone Repository
 
-FRONTEND
--> go to frontend: cd client
--> Install dependencies : npm install
--> client/.env => add: VITE_BASE_URL=http://localhost:5000 
-                       VITE_CURRENCY=$
--> Run Frontend: npm run dev
--> frontend will run: http://localhost:5173
+Clone this repository:
 
+git clone https://github.com/username/car-rental.git
 
+Go to the project directory:
 
-**5. Database Setup**
+cd car-rental
+
+The project structure:
+
+CarRental/
+├── client/
+└── server/
+
+Backend Setup
+Step 2 - Go to Backend Folder
+cd server
+
+Install backend dependencies:
+
+npm install
+
+Step 3 - Setup Environment Variables
+
+Create a new file:
+
+server/.env
+
+Copy the configuration from:
+
+server/.env.example
+
+Example:
+
+PORT=3000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+
+IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
+IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
+IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
+
+Environment Variable Explanation:
+Variable	Description
+PORT	Backend server port
+MONGODB_URI	MongoDB database connection
+JWT_SECRET	Secret key for JWT authentication
+IMAGEKIT_PUBLIC_KEY	ImageKit public key
+IMAGEKIT_PRIVATE_KEY	ImageKit private key
+IMAGEKIT_URL_ENDPOINT	ImageKit image URL endpoint
+
+Step 4 - Run Backend Server
+
+Start backend:
+
+npm run server
+
+If successful, you will see:
+
+Database connected
+Server running on port 3000
+
+Backend will run at:
+
+http://localhost:3000
+
+Frontend Setup
+Step 5 - Go to Frontend Folder
+
+Open a new terminal:
+
+cd client
+
+Install frontend dependencies:
+
+npm install
+
+Step 6 - Setup Frontend Environment Variables
+
+Create:
+
+client/.env
+
+Add:
+
+VITE_BASE_URL=http://localhost:3000
+VITE_CURRENCY=$
+Environment Variable Explanation:
+Variable	Description
+VITE_BASE_URL	Backend API URL
+VITE_CURRENCY	Currency symbol used in application
+
+Step 7 - Run Frontend
+
+Start frontend:
+
+npm run dev
+
+Frontend will run at:
+
+http://localhost:5173
+
+Running Application
+
+After both servers are running:
+
+Frontend:
+
+http://localhost:5173
+
+Backend API:
+
+http://localhost:3000
+
+Application flow:
+
+User Browser
+      |
+      |
+React Frontend
+      |
+      |
+Axios API Request
+      |
+      |
+Express Backend
+      |
+      |
+MongoDB Database
+
+# 5. Database Setup
 
 This project uses MongoDB.
 Create database:
@@ -90,7 +202,7 @@ users
 cars
 bookings
 
-**6. Schema Design Rationale**
+# 6. Schema Design Rationale
 **User Schema**
 User
  |
@@ -146,7 +258,7 @@ Booking
  |
 Car
 
-**7. Authentication Flow**
+# 7. Authentication Flow
 
 **User Registration:**
 User

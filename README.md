@@ -191,7 +191,7 @@ Express Backend
       |
 MongoDB Database
 
-# 5. Database Setup
+# 6. Database Setup
 
 This project uses MongoDB.
 Create database:
@@ -202,7 +202,7 @@ users
 cars
 bookings
 
-# 6. Schema Design Rationale
+# 7. Schema Design Rationale
 **User Schema**
 User
  |
@@ -258,7 +258,7 @@ Booking
  |
 Car
 
-# 7. Authentication Flow
+# 8. Authentication Flow
 
 **User Registration:**
 User
@@ -291,7 +291,7 @@ Validate User
 Controller Access
 
 
-# 8. Architectural Decisions
+# 9. Architectural Decisions
 
 ## Frontend Architecture
 
